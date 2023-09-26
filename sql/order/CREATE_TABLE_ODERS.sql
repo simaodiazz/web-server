@@ -1,13 +1,12 @@
 CREATE TABLE IF NOT EXISTS `orders` (
     `id` bigint(20) NOT NULL,
-    `request` varchar(2000) NOT NULL,
-    `order_status` enum(
+    `description` varchar(2000) NOT NULL,
+    `status` enum(
         "ORDER_CONFIRMED",
+        "ORDER_CANCELLED",
+        "ORDER_DEVELIVERED",
         "PROCESSING",
-        "SHIPPED",
-        "DELIVERED",
-        "AWAITING_PAYMENT",
-        "AWAITING_PICKUP"
+        "AWAITING_PAYMENT"
     ) NOT NULL DEFAULT "PROCESSING",
     `user_id` bigint(20) NOT NULL,
     `enterprise_id` bigint(20) NOT NULL,
