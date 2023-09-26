@@ -1,0 +1,1 @@
+DELETE * FROM `members` WHERE `user_id` = ? AND `enterprise_id` = ?;
